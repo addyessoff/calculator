@@ -6,19 +6,38 @@
     <!-- スマホなどへの表示 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- タブ名 -->
-    <title>My Website</title>
+    <title>My Calculate Website</title>
     <!-- CSSの指定 -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>計算ができるサイト</h1>
-    <div class="calculator">
-        <h2>入力欄</h2>
-            <input type="number" id="num1">
-            <input type="number" id="num2">
-            <button onclick="calculate()">計算</button>
-            <h2>計算結果</h2>
-            <p id="result">入力されていません</p>
+    <h1>計算機のサイト</h1>
+    <div class="calculator-add">
+        <h2>加算機</h2>
+        <h3>入力欄</h3>
+        <input type="number" id="num1">
+        <input type="number" id="num2">
+        <button onclick="calculate()">計算</button>
+        <h3>計算結果</h3>
+        <p id="result">入力されていません</p>
+    </div>
+    <div class="calculater-nisa">
+        <h2>NISA積立シュミレーター</h2>
+        <h3>入力欄</h3>
+        <p>毎月の積立額(万円)</p>
+        <input type="number" id="investment" min=0 placeholder="毎月の積立額">
+        <p>積立期間(年)</p>
+        <input type="number" id="years" min=0 placeholder="積立期間">
+        <p>想定利回り(%)</p>
+        <input type="number" id="percent" placeholder="想定利回り">
+        <p>
+        <button onclick="calculate_nisa()">計算</button>
+        </p>
+        <p><span class="label">元本（積立した金額）：</span><span id ="result_sum">入力されていません</span></p>
+        <p><span class="label">運用益（利益）　　　：</span><span id="result_profit">入力されていません</span></p>
+        <p><span class="label">総資産額（総額）　　：</span><span id="result_total">入力されていません</span></p>
+        <p>© 2026/10/03 My Calculate Website</p>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
