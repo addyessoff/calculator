@@ -13,7 +13,7 @@
 <body>
     <h1>計算機のサイト</h1>
     <div class="calculator-add">
-        <h2>加算機</h2>
+        <h2>1.加算機</h2>
         <h3>入力欄</h3>
         <input type="number" id="num1">
         <input type="number" id="num2">
@@ -21,8 +21,18 @@
         <h3>計算結果</h3>
         <p id="result">入力されていません</p>
     </div>
+    <div class="calculator-add">
+        <h2>2.割引計算</h2>
+        <h3>入力欄</h3>
+        <input type="number" id="price" placeholder="元の金額">
+        <input type="number" id="discount" placeholder="割引率(%)">
+        <button onclick="calculate_discount()">計算</button>
+        <h3>計算結果</h3>
+        <p><span class="label">割引額　　　：</span><span id="result_discountedPrice">入力されていません</span></p>
+        <p><span class="label">お得した金額：</span><span id="result_discountAmount">入力されていません</span></p>
+    </div>
     <div class="calculater-nisa">
-        <h2>NISA積立シュミレーター</h2>
+        <h2>3.NISA積立シュミレーター</h2>
         <h3>入力欄</h3>
         <p>毎月の積立額(万円)</p>
         <input type="number" id="investment" min=0 placeholder="毎月の積立額">
